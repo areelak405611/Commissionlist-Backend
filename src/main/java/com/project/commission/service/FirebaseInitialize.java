@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.FirebaseDatabase;
+import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -32,8 +34,9 @@ public class FirebaseInitialize {
             .build();
 
             FirebaseApp.initializeApp(options);
+            FirebaseDatabase.getInstance(FirebaseApp.getInstance()).setPersistenceEnabled(true);
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

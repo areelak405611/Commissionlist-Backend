@@ -34,7 +34,7 @@ public class FirebaseInitialize {
             .build();
 
             FirebaseApp.initializeApp(options);
-            FirebaseDatabase.getInstance(FirebaseApp.getInstance()).setPersistenceEnabled(true);
+            //FirebaseDatabase.getInstance(FirebaseApp.getInstance()).setPersistenceEnabled(true);
 
         } catch (IOException e) {
             e.printStackTrace();

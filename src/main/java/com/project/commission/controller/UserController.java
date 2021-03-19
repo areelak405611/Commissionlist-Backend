@@ -27,11 +27,11 @@ public class UserController {
     @Autowired
     UserService userservice;
     
-    @GetMapping("/")
+    @GetMapping("/test")
     public ResponseEntity<String> test(){
        try {
             String str = "Hello!";
-            return new ResponseEntity<>(str,HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(str,HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         } 
